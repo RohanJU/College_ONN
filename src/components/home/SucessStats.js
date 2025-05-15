@@ -5,9 +5,8 @@ export default function SucessStats() {
       <div className="mb-12">
         <h2 className="text-black text-3xl font-bold mb-2">Our Success</h2>
         <p className="text-gray-600 max-w-xl mx-auto">
-          Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae
-          sollicitudin at nec nam et pharetra gravida. Adipiscing a quis
-          ultrices eu ornare tristique vel nisi orci.
+          Over the years, College ONN has helped thousands of students discover the best colleges, 
+          access expert guidance, and stay informed throughout their admission journey.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-10 text-[#1D1D1D] font-semibold text-lg">
           <div>
@@ -46,7 +45,7 @@ export default function SucessStats() {
         </p>
       </div>
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-4xl mx-auto">
         {/* College Predictor Card */}
         <div className="relative rounded-xl overflow-hidden shadow-lg">
           <img

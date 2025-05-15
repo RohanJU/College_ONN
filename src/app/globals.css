@@ -1,15 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Grayscale and Neutrals */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-100: #c4c4c4;
+  --gray-200: #5b5b5b;
+  --gray-300: #595959;
+  --gray-400: #545567;
+  --gray-500: #83839a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brights / Transparent Variants */
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --cyan-50: rgba(0, 255, 240, 0.5);
+  --blue-75: rgba(157, 204, 255, 0.75);
+  --gray-60: rgba(131, 131, 154, 0.6);
+
+  /* Accent Colors */
+  --pink-100: #f25471;
+  --pink-200: #d8587e;
+  --pink-300: #f3627c;
+
+  --blue-100: #23bdee;
+  --blue-200: #00fff0;
+  --blue-300: #2f327d;
+  --blue-400: #252641;
+  --blue-500: #9dccff;
+
+  --green-100: #2ebb5e;
+  --green-200: #4ee381;
+
+  --teal-100: #49bbbd;
+
+  --orange-100: #f48c06;
+  --orange-200: #f88c3d;
+
+  --beige-100: #fbecd7;
+
+  /* Default Theme Colors */
+  --background: var(--white);
+  --foreground: var(--black);
+
+  /* Fonts (Optional if using Tailwind plugin) */
+  --font-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-mono: 'Courier New', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +55,7 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
