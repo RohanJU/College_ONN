@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection'
 import SucessStats from '@/components/home/SucessStats'
 import CollegeSearchSection from '@/components/home/CollegeSearchSection'
 import CareerPathsSection from '@/components/home/CareerPathsSection'
+import LatestNews from '@/components/home/LatestNews'
 
 export default function page() {
   return (
@@ -10,7 +11,8 @@ export default function page() {
   <HeroSection/>
   <SucessStats/>
   <CollegeSearchSection/>
-  <CareerPathsSection/>
+  <CareerPathsSection/> 
+  <LatestNews/>
 </>
   )
 }
