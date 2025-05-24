@@ -1,62 +1,43 @@
-"use client"; // Only if you're using App Router (src/app)
-import Image from "next/image";
+"use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { EmblaCarousel } from "../carousel/EmblaCarousel";
 
-// ✅ Fix the image paths to match files in /public
 const carouselImages = [
   "/Aiims-delhi.jpg",
   "/Iit-delhi.jpg",
   "/JU.jpg",
 ];
 
-// Dummy college cards
 const colleges = new Array(8).fill({
   title: "Indian Institute of Technology, Madras",
-  image: "/Aiims-delhi.jpg", // ✅ file should match public folder name
+  image: "/Aiims-delhi.jpg",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
 });
 
 export default function CollegeSearchSection() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="bg-white">
-      {/* 🚀 Carousel Search Section */}
-      <div className="relative h-[400px] w-full overflow-hidden">
-        {/* 📷 Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
-          style={{
-            backgroundImage: `url('${carouselImages[currentImageIndex]}')`,
-          }}
-        ></div>
+      {/* 🚀 Carousel + Search Overlay */}
+      <div className="relative">
+        <EmblaCarousel images={carouselImages}/>
 
         {/* 🔍 Search Overlay */}
-        <div className="absolute inset-0 bg-white bg-opacity-40 z-10 flex flex-col justify-center items-center px-4">
+        <div className="absolute   inset-0  flex flex-col justify-center items-center px-4">
           <input
             type="text"
-            placeholder="Search your favourite college"
-            className="w-full max-w-2xl p-3 rounded-lg shadow mb-4"
+            placeholder="Search for College Exam and More..."
+            className="w-full bg-white text-black max-w-2xl p-3 rounded-lg shadow mb-4"
           />
           <div className="flex flex-wrap justify-center gap-4">
-            <select className="p-2 rounded shadow">
+            <select className="p-2 bg-white text-black rounded ">
               <option>Course</option>
             </select>
-            <select className="p-2 rounded shadow">
+            <select className="p-2 bg-white text-black rounded ">
               <option>Location</option>
             </select>
-            <select className="p-2 rounded shadow">
+            <select className="p-2 bg-white text-black rounded ">
               <option>Ranking</option>
             </select>
             <button className="bg-[#49BBBD] text-white px-6 py-2 rounded shadow font-semibold">
@@ -90,4 +71,4 @@ export default function CollegeSearchSection() {
       </div>
     </div>
   );
-}
+} 
