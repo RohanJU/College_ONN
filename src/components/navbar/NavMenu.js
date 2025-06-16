@@ -1,5 +1,4 @@
 // components/Navbar.jsx
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -7,7 +6,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between px-6 py-4">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/College ONN(2).png" alt="COLLEGE ONN"/>
+        <img src="/" alt="COLLEGE ONN" />
       </div>
 
       {/* Navigation Buttons */}
