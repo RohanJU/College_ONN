@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function SucessStats() {
   return (
     <section className="py-16 px-6 md:px-20 text-center bg-white">
@@ -5,8 +8,9 @@ export default function SucessStats() {
       <div className="mb-12">
         <h2 className="text-black text-3xl font-bold mb-2">Our Success</h2>
         <p className="text-gray-600 max-w-xl mx-auto">
-          Over the years, College ONN has helped thousands of students discover the best colleges, 
-          access expert guidance, and stay informed throughout their admission journey.
+          Over the years, College ONN has helped thousands of students discover
+          the best colleges, access expert guidance, and stay informed
+          throughout their admission journey.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-10 text-[#1D1D1D] font-semibold text-lg">
           <div>
@@ -31,6 +35,7 @@ export default function SucessStats() {
           </div>
         </div>
       </div>
+
       {/* What is College Onn */}
       <div className="mb-12">
         <h2 className="text-black text-2xl font-bold">
@@ -44,41 +49,72 @@ export default function SucessStats() {
           college journey simple, smart, and stress-free.
         </p>
       </div>
+
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
         {/* College Predictor Card */}
-        <div className="relative rounded-xl overflow-hidden shadow-lg">
+        <motion.div
+          className="relative rounded-2xl overflow-hidden shadow-lg"
+          whileHover={{ scale: 1.02 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <img
-            src="/Iit-delhi.jpg"
-            alt="Student"
+            src="/pngegg (23).png"
+            alt="College Predictor"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-center items-center text-black p-4">
-            <h3 className=" text-[#49BBBD] bg-white rounded-full px-4 py-2 text-xl font-semibold mb-2">
-              College Predictor
-            </h3>
-            <button className=" bg-white border border-white rounded-full px-4 py-2 hover:bg-white hover:text-[#49BBBD] transition">
-              Find Your College
-            </button>
+          <div className="absolute inset-0 flex flex-col justify-end">
+            <div className="bg-teal-300 px-4 py-6 flex flex-col items-center space-y-3">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-white text-teal-700 font-semibold px-6 py-2 rounded-full shadow hover:bg-black hover:text-white transition"
+              >
+                College Predictors
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-black text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-white hover:text-teal-700 transition"
+              >
+                Rank Predictors
+              </motion.button>
+            </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Compare College Card */}
-        <div className="relative rounded-xl overflow-hidden shadow-lg">
+        <motion.div
+          className="relative rounded-2xl overflow-hidden shadow-lg"
+          whileHover={{ scale: 1.02 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <img
-            src="/JU.jpg"
-            alt="Student"
+            src="/pngegg (24).png"
+            alt="Compare College"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-center items-center text-black p-4">
-            <h3 className=" text-[#49BBBD]  bg-white rounded-full px-4 py-2  text-xl font-semibold mb-2">
-              Compare College
-            </h3>
-            <button className="bg-white border border-white rounded-full px-4 py-2 hover:bg-white hover:text-[#49BBBD] transition">
-              Find the Best One
-            </button>
+          <div className="absolute inset-0 flex flex-col justify-end">
+            <div className="bg-orange-400 px-4 py-6 flex flex-col items-center space-y-3">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-white text-orange-700 font-semibold px-6 py-2 rounded-full shadow hover:bg-black hover:text-white transition"
+              >
+                Compare College
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-black text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-white hover:text-orange-700 transition"
+              >
+                Find the Best One
+              </motion.button>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

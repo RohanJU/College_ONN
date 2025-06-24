@@ -1,3 +1,4 @@
+"use client";
 import {
   Book,
   Briefcase,
@@ -8,6 +9,8 @@ import {
   Syringe,
   Users,
 } from "lucide-react";
+
+import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -54,26 +57,33 @@ const categories = [
 
 export default function CareerPathsSection() {
   return (
-    <section className="bg-white px-20 py-16 max-w-auto mx-auto">
+    <section className="bg-white px-4 md:px-20 py-16 max-w-auto mx-auto">
       <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 text-[#1F1F1F]">
-        Choose Your Career Path – <span className="text-[#0bf1ac] font-bold">Explore Exams</span>
+        Choose Your Career Path –{" "}
+        <span className="text-[#0bf1ac] font-bold">Explore Exams</span>
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {categories.map((cat, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:bg-teal-200 hover:shadow-lg transition"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:bg-teal-300 hover:shadow-lg transition"
           >
-            <div className="bg-gray-100 p-3 rounded-lg mb-4">{cat.icon}</div>
-            <h3 className="text-lg  text-black font-semibold mb-2">{cat.title}</h3>
+            <div className="bg-black p-3 rounded-lg mb-4">{cat.icon}</div>
+            <h3 className="text-lg text-black font-semibold mb-2">
+              {cat.title}
+            </h3>
             <p className="text-sm text-black">{cat.desc}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="mt-10 flex justify-end">
-        <button className="bg-[#49BBBD] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#3da2a4] transition">
+        <button className="bg-[#49BBBD] text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-400 transition">
           View More
         </button>
       </div>

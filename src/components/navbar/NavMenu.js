@@ -6,9 +6,14 @@ export default function Navbar() {
     <nav className="flex items-center justify-between px-6 py-4">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/" alt="COLLEGE ONN" />
+        <Link href="/">
+          <img
+            src="/CollegeONN_LOGO.png"
+            alt="COLLEGE ONN"
+            className="h-24 w-auto object-contain"
+          />
+        </Link>
       </div>
-
       {/* Navigation Buttons */}
       <div className="flex gap-4">
         <Link
@@ -19,7 +24,7 @@ export default function Navbar() {
         </Link>
         <Link
           href="/signup"
-          className="bg-[#B2E3E5] text-[black] font-semibold px-5 py-2 rounded-full shadow"
+          className="bg-white text-[black] font-semibold px-5 py-2 rounded-full shadow"
         >
           Sign Up
         </Link>
