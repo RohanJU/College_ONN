@@ -43,8 +43,8 @@
   --foreground: var(--black);
 
   /* Fonts (Optional if using Tailwind plugin) */
-  --font-sans: 'Arial', 'Helvetica', sans-serif;
-  --font-mono: 'Courier New', monospace;
+  --font-sans: "Arial", "Helvetica", sans-serif;
+  --font-mono: "Courier New", monospace;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -55,7 +55,7 @@
 } */
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--foreground);
+  color: var(--background);
   font-family: var(--font-sans);
 }
