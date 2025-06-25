@@ -81,12 +81,7 @@ export default function CareerPathsSection() {
           </motion.div>
         ))}
       </div>
-
-      <div className="mt-10 flex justify-end">
-        <button className="bg-[#49BBBD] text-white px-6 py-2 rounded-full shadow-md hover:bg-orange-400 transition">
-          View More
-        </button>
-      </div>
+      
     </section>
   );
 }

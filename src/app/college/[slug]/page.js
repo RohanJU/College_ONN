@@ -10,8 +10,6 @@ import CoursesSection from "./components/CoursesSection";
 import CutoffSection from "./components/CutoffSection";
 import GallerySection from "./components/GallerySection";
 import ReviewsSection from "./components/ReviewsSection";
-import Footer from "./components/Footer";
-
 export default function CollegePage() {
   const { slug } = useParams();
   const college = collegeData.find((c) => c.slug === slug);
@@ -129,8 +127,6 @@ export default function CollegePage() {
         {activeTab === "qna" && <p className="text-black">QnA section coming soon...</p>}
         {activeTab === "fees" && <p className="text-black">Fees structure coming soon...</p>}
       </div>
-
-      <Footer />
     </>
   );
 }
