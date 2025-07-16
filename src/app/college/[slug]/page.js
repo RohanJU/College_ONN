@@ -114,18 +114,38 @@ export default function CollegePage() {
 
       {/* Tab Content */}
       <div className="max-w-6xl mx-auto px-6 pb-12">
-        {activeTab === "overview" && <p className="text-black">Overview content coming soon...</p>}
-        {activeTab === "courses" && <CoursesSection courses={college.courses} />}
-        {activeTab === "admission" && <p className="text-black">Admission details coming soon...</p>}
-        {activeTab === "scholarship" && <p className="text-black">Scholarship info coming soon...</p>}
-        {activeTab === "placements" && <p className="text-black">Placements data coming soon...</p>}
+        {activeTab === "overview" && (
+          <p className="text-black">Overview content coming soon...</p>
+        )}
+        {activeTab === "courses" && (
+          <CoursesSection courses={college.courses} />
+        )}
+        {activeTab === "admission" && (
+          <p className="text-black">Admission details coming soon...</p>
+        )}
+        {activeTab === "scholarship" && (
+          <p className="text-black">Scholarship info coming soon...</p>
+        )}
+        {activeTab === "placements" && (
+          <p className="text-black">Placements data coming soon...</p>
+        )}
         {activeTab === "cutoff" && <CutoffSection cutoff={college.cutoff} />}
-        {activeTab === "campus" && <p className="text-black">Campus life coming soon...</p>}
+        {activeTab === "campus" && (
+          <p className="text-black">Campus life coming soon...</p>
+        )}
         {activeTab === "gallery" && <GallerySection images={college.gallery} />}
-        {activeTab === "reviews" && <ReviewsSection reviews={college.reviews} />}
-        {activeTab === "news" && <p className="text-black">News updates coming soon...</p>}
-        {activeTab === "qna" && <p className="text-black">QnA section coming soon...</p>}
-        {activeTab === "fees" && <p className="text-black">Fees structure coming soon...</p>}
+        {activeTab === "reviews" && (
+          <ReviewsSection reviews={college.reviews} />
+        )}
+        {activeTab === "news" && (
+          <p className="text-black">News updates coming soon...</p>
+        )}
+        {activeTab === "qna" && (
+          <p className="text-black">QnA section coming soon...</p>
+        )}
+        {activeTab === "fees" && (
+          <p className="text-black">Fees structure coming soon...</p>
+        )}
       </div>
     </>
   );
